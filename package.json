@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "mdx-deck build deck.js --webpack webpack.config.js",
-    "postbuild": "npm run build:pdf",
+    "postbuild": "npm run build:pdf && npm run copy",
     "build:pdf": "mdx-deck pdf deck.js",
+    "copy": "cp -r ./images/. dist/images/",
     "start": "mdx-deck deck.js --webpack webpack.config.js"
   },
   "devDependencies": {
